@@ -1,6 +1,6 @@
-package src.main.java;
+
 import java.util.LinkedList;
-public class OrderList
+public class OrderList extends src.main.java.OrigCust
 {
     public static void main(String[] args)
     {
@@ -13,5 +13,5 @@ public class OrderList
         order_Item.add("Hat");
         for(int i =0; i < order_Item.size(); i++)
             System.out.println(order_Item.get(i));
-           }
+     }
 }
