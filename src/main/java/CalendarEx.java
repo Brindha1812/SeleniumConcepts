@@ -17,12 +17,11 @@ public static void main(String[] args)
     datePicker.click();
 
     By nextButton = By.xpath("//a[@title='Next']");
-    WebElement nextUI = driver.findElement(calendarBox);
+    WebElement nextUI = driver.findElement(nextButton);
     nextUI.click();
 
     By buttonTen = By.xpath("//a[contains(text(),'10')]");
-    WebElement dateTen = driver.findElement(calendarBox);
+    WebElement dateTen = driver.findElement(buttonTen);
     dateTen.click();
-
 }
 }

@@ -2,9 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.io.File;
-import java.sql.SQLOutput;
 
 public class FileDownload
 {
@@ -17,9 +15,7 @@ public class FileDownload
 
         By xlsXpath = By.xpath("//*[@id=\"output\"]/div[1]/a");
         xlsDownload(xlsXpath);
-
     }
-//qqqqqqqqqqqqqqqqqqqqqq                        q11
     static void xlsDownload(By locator)
     {
         WebElement element = driver.findElement(locator);

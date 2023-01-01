@@ -1,3 +1,4 @@
+import com.google.common.annotations.VisibleForTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,6 +40,7 @@ public class HyperLinkEx
             System.out.println("The Specific page is not loaded");
         driver.navigate().back();
     }
+
     static void brokenLinkCheck(By locator)
     {
         WebElement element = driver.findElement(locator);

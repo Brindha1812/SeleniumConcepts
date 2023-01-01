@@ -27,9 +27,5 @@ public class UploadFileEx
         WebElement element = driver.findElement(locator);
         element.click();
         element.sendKeys("C:\\Users\\bhara\\Downloads\\sample3.xls");
-
-
-
-
     }
 }

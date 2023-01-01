@@ -8,7 +8,8 @@ import java.util.List;
 public class DropDownEx
 {
     static WebDriver driver;
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException
+    {
         System.setProperty("webdriver.chrome.driver","C:\\Web Drivers\\Chrome Driver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://testleaf.herokuapp.com/pages/Dropdown.html");
@@ -27,11 +28,10 @@ public class DropDownEx
 
         By multiSelect = By.xpath("//*[@id=\"contentblock\"]/section/div[6]/select");
         multiOption(multiSelect);
-
-
     }
 
-    static void indexDD(By locator) throws InterruptedException {
+    static void indexDD(By locator) throws InterruptedException
+    {
         WebElement element = driver.findElement(locator);
         Select select = new Select(element);
         select.selectByIndex(2);
@@ -39,7 +39,8 @@ public class DropDownEx
         element.sendKeys("Selenium");
         Thread.sleep(300);
     }
-    static void textDD(By locator) throws InterruptedException {
+    static void textDD(By locator) throws InterruptedException
+    {
         WebElement element = driver.findElement(locator);
         Select select = new Select(element);
         select.selectByVisibleText("Loadrunner");
@@ -66,5 +67,4 @@ public class DropDownEx
         select.selectByIndex(1);
         select.selectByIndex(3);
     }
-
 }

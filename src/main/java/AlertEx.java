@@ -3,11 +3,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class AlertEx
 {
     static WebDriver driver;
-    public static void main(String[] args) throws InterruptedException {
+//
+    @BeforeClass
+    public void setup() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","C:\\Web Drivers\\Chrome Driver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://testleaf.herokuapp.com/pages/Alert.html");
@@ -16,7 +20,10 @@ public class AlertEx
         promptAlert(promptBox);
     }
 
-    static void promptAlert(By locator) throws InterruptedException {
+    @Test
+
+    public  void promptAlert(By locator) throws InterruptedException
+    {
         WebElement element = driver.findElement(locator);
         element.click();
         Alert alert = driver.switchTo().alert();
@@ -25,7 +32,6 @@ public class AlertEx
         Thread.sleep(3000);
        // alert.dismiss();
         alert.accept();
-
     }
 }
 

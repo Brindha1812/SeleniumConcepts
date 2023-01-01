@@ -2,7 +2,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.interactions.Actions;
 
 public class FramesEx
 {
@@ -15,9 +14,6 @@ public class FramesEx
         driver.switchTo().frame(0);
         By frameClick = By.id("Click");
         frameOne(frameClick);
-
-
-
     }
     static void frameOne(By locator)
     {
